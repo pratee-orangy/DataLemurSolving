@@ -1,0 +1,9 @@
+Average Post Hiatus (Part 1)
+Facebook SQL Interview Question
+
+SELECT user_id,
+datediff(max(date(post_date)),min(date(post_date)))  AS days_between
+FROM posts
+where year(post_date)=2021 
+group by user_id
+having count(post_id)>1
