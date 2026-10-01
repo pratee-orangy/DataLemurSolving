@@ -1,0 +1,9 @@
+Data Science Skills
+LinkedIn SQL Interview Question
+
+SELECT candidate_id
+FROM candidates
+where skill IN ('Python', 'Tableau', 'PostgreSQL')
+group by candidate_id
+having count(skill) = 3
+order by candidate_id ASC
