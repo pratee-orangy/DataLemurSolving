@@ -7,3 +7,5 @@ select extract(month from submit_date) as mth,
 from reviews
 group by extract(month from submit_date), product_id
 order by mth, product;
+
+On real data spanning multiple years, January 2022 and January 2023 would merge into one group. In that case, group by year(submit_date), month(submit_date), or by date_format(submit_date, '%Y-%m').
