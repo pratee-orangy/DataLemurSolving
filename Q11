@@ -1,0 +1,8 @@
+Well Paid Employees
+FAANG SQL Interview Question - Empl salary > direct manager salary
+
+SELECT e.employee_id,	e.name as employee_name 
+FROM employee e 
+join employee m ON e.manager_id = m.employee_id 
+where e.salary > m.salary
+LIMIT 5;
