@@ -1,0 +1,11 @@
+Final Account Balance
+PayPal SQL Interview Question
+
+SELECT account_id,	
+sum(
+CASE 
+  WHEN transaction_type ='Deposit' then amount
+  else -amount
+end) as final_balance
+FROM transactions
+group by account_id
